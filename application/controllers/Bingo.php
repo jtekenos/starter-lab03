@@ -22,7 +22,7 @@ class Bingo extends Application {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
         
-        $record = $this->quotes->get(4);
+        $record = $this->quotes->get(5);
         $this->data = array_merge($this->data, $record);
 
         $this->render();
