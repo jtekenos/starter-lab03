@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
- * 
- * controllers/Welcome.php
+ * Bingo controller. Shows the pages with default, /wisdom routes 
+ * using the 'justone' view. 
+ *
+ * controllers/Bingo.php
  *
  * ------------------------------------------------------------------------
  */
@@ -20,8 +20,8 @@ class Bingo extends Application {
 
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
         
+        // get the author and quote of id 5, to pass on to our view
         $record = $this->quotes->get(5);
         $this->data = array_merge($this->data, $record);
 
@@ -30,7 +30,7 @@ class Bingo extends Application {
 
     function wisdom() {
         $this->data['pagebody'] = 'justone'; 
-
+        // get the author and quote of id 6, to pass on to our view
         $record = $this->quotes->get(6);
         $this->data = array_merge($this->data, $record);
 
