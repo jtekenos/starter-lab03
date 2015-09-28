@@ -44,7 +44,9 @@ $route['sleep'] = 'first/zzz';
 $route['lock/(:any)/(:any)'] = 'welcome/shucks';
 $route['show/(:num)'] = 'first/gimme/$1';
 $route['dunno'] = 'guess';
+/* matches 4 alphanumeric characters */
 $route['(^[a-zA-Z]{4})/bingo'] = 'bingo';
+/* matches any 4 digits following comp */
 $route['comp\d{4}/.*'] = 'bingo/wisdom';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
